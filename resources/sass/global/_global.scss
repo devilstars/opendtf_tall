@@ -1,0 +1,19 @@
+* {
+    outline: none;
+}
+
+.max-w-screen-xl {
+    max-width: 1280px !important;
+}
+
+.pt-header {
+    padding-top: 66px;
+}
+
+.top-header {
+    top: 66px;
+}
+
+.h-screen-sidebar {
+    height: calc(100vh - 66px);
+}

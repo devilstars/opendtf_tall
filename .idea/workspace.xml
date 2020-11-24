@@ -2,19 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a95c7422-d855-4cbb-9718-c707958f7c93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/global/_global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/global/modules/_scrollbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/forms/elements/input.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/feed/default.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/feed/elements/item.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/header/default.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/header/elements/add-post.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/header/elements/auth.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/header/elements/profile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/header/elements/search.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/header/elements/sidebar-toggle.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/sidebar/default.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/sidebar/elements/categories.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/sidebar/elements/filter.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/global/sidebar/elements/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/modals/auth.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -131,6 +151,16 @@
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kgnhXRRJg21kZQvAPvAQNltVZM" />
@@ -145,11 +175,10 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.space" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -167,7 +196,9 @@
       <option name="presentableId" value="Default" />
       <updated>1606131222083</updated>
       <workItem from="1606131223173" duration="31000" />
-      <workItem from="1606134262263" duration="3205000" />
+      <workItem from="1606134262263" duration="7806000" />
+      <workItem from="1606199626899" duration="4408000" />
+      <workItem from="1606208020918" duration="5278000" />
     </task>
     <task id="LOCAL-00001" summary="Laravel init + tall stack">
       <created>1606137983665</created>
@@ -176,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606137983665</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="tailwind v1 &gt;&gt;&gt; v2&#10;postcss update&#10;autoprefixer update&#10;typography update">
+      <created>1606139860129</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606139860129</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,20 +225,29 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Laravel init + tall stack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laravel init + tall stack" />
+    <MESSAGE value="tailwind v1 &gt;&gt;&gt; v2&#10;postcss update&#10;autoprefixer update&#10;typography update" />
+    <option name="LAST_COMMIT_MESSAGE" value="tailwind v1 &gt;&gt;&gt; v2&#10;postcss update&#10;autoprefixer update&#10;typography update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1304" y="211" key="CommitChangelistDialog2" timestamp="1606137980598">
+    <state x="-1304" y="211" key="CommitChangelistDialog2" timestamp="1606139858521">
       <screen x="-1858" y="5" width="1858" height="1080" />
     </state>
-    <state x="-1304" y="211" key="CommitChangelistDialog2/62.0.1474.864/-1858.5.1858.1080@-1858.5.1858.1080" timestamp="1606137980598" />
-    <state x="-1337" y="278" key="Vcs.Push.Dialog.v2" timestamp="1606137992962">
+    <state x="-1304" y="211" key="CommitChangelistDialog2/62.0.1474.864/-1858.5.1858.1080@-1858.5.1858.1080" timestamp="1606139858521" />
+    <state x="-1428" y="190" key="SettingsEditor" timestamp="1606207914567">
       <screen x="-1858" y="5" width="1858" height="1080" />
     </state>
-    <state x="-1337" y="278" key="Vcs.Push.Dialog.v2/62.0.1474.864/-1858.5.1858.1080@-1858.5.1858.1080" timestamp="1606137992962" />
-    <state x="-1266" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1606139804643">
+    <state x="-1428" y="190" key="SettingsEditor/62.0.1474.864/-1858.5.1858.1080@-1858.5.1858.1080" timestamp="1606207914567" />
+    <state x="-1337" y="278" key="Vcs.Push.Dialog.v2" timestamp="1606139861678">
       <screen x="-1858" y="5" width="1858" height="1080" />
     </state>
-    <state x="-1266" y="240" width="672" height="678" key="search.everywhere.popup/62.0.1474.864/-1858.5.1858.1080@-1858.5.1858.1080" timestamp="1606139804643" />
+    <state x="-1337" y="278" key="Vcs.Push.Dialog.v2/62.0.1474.864/-1858.5.1858.1080@-1858.5.1858.1080" timestamp="1606139861678" />
+    <state x="-1222" y="249" width="586" height="592" key="find.popup" timestamp="1606209802741">
+      <screen x="-1858" y="5" width="1858" height="1080" />
+    </state>
+    <state x="-1222" y="249" width="586" height="592" key="find.popup/62.0.1474.864/-1858.5.1858.1080@-1858.5.1858.1080" timestamp="1606209802741" />
+    <state x="-1266" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1606209939517">
+      <screen x="-1858" y="5" width="1858" height="1080" />
+    </state>
+    <state x="-1266" y="240" width="672" height="678" key="search.everywhere.popup/62.0.1474.864/-1858.5.1858.1080@-1858.5.1858.1080" timestamp="1606209939517" />
   </component>
 </project>
