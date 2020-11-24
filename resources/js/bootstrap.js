@@ -1,3 +1,4 @@
+import './state/spruce';
 import 'alpinejs';
 
 /**
