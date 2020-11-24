@@ -1,9 +1,9 @@
 import Spruce from '@ryangjchandler/spruce'
+import modalAuth from "./modals/auth";
 
-/* example */
-// Spruce.store('modal02', {
-//     open: false,
-// });
-/* end of example */
+/* modals */
+new modalAuth();
+/* end of modals */
+
 
 export default Spruce

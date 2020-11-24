@@ -1,6 +1,6 @@
-<div class="leading-none ml-3">
+<div class="leading-none ml-3" x-data="modalAuth()">
     <button class="text-gray-800 inline-flex items-center h-10 font-semibold hover:text-indigo-500 group"
-            @click="toggleShowModal">
+            @click.prevent="openModal">
         <svg x="0px" y="0px" width="612px" height="612px" viewBox="0 0 612 612"
              class="text-gray-600 h-8 w-8 fill-current mr-2 group-hover:text-indigo-500">
             <path d="M331.685,425.378c-7.478,7.479-7.478,19.584,0,27.043c7.479,7.478,19.584,7.478,27.043,0l131.943-131.962
@@ -12,9 +12,9 @@
                             v-382.5C612,72.503,577.747,38.25,535.5,38.25z"/>
         </svg>
         <span class="hidden sm:inline-block">
-          {{ __('front.login') }}
-      </span>
+            {{ __('front.login') }}
+        </span>
     </button>
 
-{{--    <app-auth-modal />--}}
+    <x-modals.auth/>
 </div>
