@@ -30,8 +30,9 @@
         <x-global.header.default />
         <div class="flex max-w-screen-xl w-full mx-auto px-1 md:px-6 h-full pt-header">
             <div class="tm-sidebar md:w-1/4 lg:w-1/5 border-r-2"
-                 :class="{'tm-active': showSidebar}"
-                 v-click-outside="setShowSidebarOutside"> <!-- .tm-active to toggle -->
+                 x-data="sidebar()"
+                 :class="{'tm-active': $store.sidebar.open}"
+                 @click.away="hideAway"> <!-- .tm-active to toggle -->
                 <x-global.sidebar.default />
             </div>
             <div class="w-full md:w-3/4 lg:w-3/5 px-2 md:px-6">

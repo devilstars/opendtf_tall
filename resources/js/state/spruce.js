@@ -1,6 +1,7 @@
 import Spruce from '@ryangjchandler/spruce'
 import ModalAuth from "./modals/auth";
 import Search from "./modules/search";
+import Sidebar from "./modules/sidebar";
 
 /* modals */
 new ModalAuth();
@@ -8,6 +9,7 @@ new ModalAuth();
 
 /* modules */
 new Search();
+new Sidebar();
 /* end of modules */
 
 
