@@ -1,9 +1,14 @@
 import Spruce from '@ryangjchandler/spruce'
-import modalAuth from "./modals/auth";
+import ModalAuth from "./modals/auth";
+import Search from "./modules/search";
 
 /* modals */
-new modalAuth();
+new ModalAuth();
 /* end of modals */
+
+/* modules */
+new Search();
+/* end of modules */
 
 
 export default Spruce

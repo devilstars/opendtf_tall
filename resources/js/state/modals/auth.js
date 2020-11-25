@@ -1,6 +1,6 @@
 import Spruce from "@ryangjchandler/spruce";
 
-class modalAuth {
+class ModalAuth {
 
     constructor() {
         this.init();
@@ -8,10 +8,10 @@ class modalAuth {
 
     init() {
         Spruce.store('modalAuth', {
-            open: true,
+            open: false,
         });
     }
 
 }
 
-export default modalAuth;
+export default ModalAuth;

@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'login' => 'Вход'
+    'login' => 'Вход',
+    'search' => 'Поиск'
 ];

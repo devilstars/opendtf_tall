@@ -1,12 +1,19 @@
 import './state/spruce';
 import 'alpinejs';
 
-import modalAuth from "./modules/modals/auth";
+import ModalAuth from "./modules/modals/auth";
+import Search from "./modules/search";
 
 
 /* modals */
-new modalAuth();
+new ModalAuth();
 /* end of modals */
+
+
+/* modules */
+new Search();
+/* end of modules */
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

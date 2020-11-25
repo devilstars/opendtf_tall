@@ -1,10 +1,10 @@
-class modalAuth {
+class ModalAuth {
 
     constructor() {
-        window.modalAuth = this.modalAuth;
+        window.modalAuth = this.init;
     }
 
-    modalAuth() {
+    init() {
         return {
             openModal() {
                 setTimeout(() => {
@@ -26,4 +26,4 @@ class modalAuth {
 
 }
 
-export default modalAuth;
+export default ModalAuth;
