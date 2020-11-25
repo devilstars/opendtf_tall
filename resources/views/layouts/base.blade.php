@@ -36,18 +36,13 @@
                 <x-global.sidebar.default />
             </div>
             <div class="w-full md:w-3/4 lg:w-3/5 px-2 md:px-6">
-                content here
+                @yield('body')
             </div>
             <div class="hidden lg:block w-1/5 border-l-2">
                 <x-global.feed.default />
             </div>
         </div>
     </div>
-
-
-
-
-{{--        @yield('body')--}}
 
         @livewireScripts
         <!-- Scripts -->

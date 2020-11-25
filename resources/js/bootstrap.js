@@ -4,6 +4,7 @@ import 'alpinejs';
 import ModalAuth from "./modules/modals/auth";
 import Search from "./modules/search";
 import Sidebar from "./modules/sidebar";
+import PostSort from "./modules/post-sort";
 
 
 /* modals */
@@ -14,6 +15,7 @@ new ModalAuth();
 /* modules */
 new Search();
 new Sidebar();
+new PostSort();
 /* end of modules */
 
 /**

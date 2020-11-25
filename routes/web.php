@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('home');
+Route::get('/', [\App\Http\Controllers\PageController::class, 'home'])->name('front.home');
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
