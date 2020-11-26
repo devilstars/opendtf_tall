@@ -19,9 +19,11 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
         @livewireStyles
+        @yield('styles')
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        @yield('scripts-top')
     </head>
 
     <body>
@@ -47,5 +49,6 @@
         @livewireScripts
         <!-- Scripts -->
         <script src="{{ url(mix('js/app.js')) }}" defer></script>
+        @yield('scripts-bottom')
     </body>
 </html>

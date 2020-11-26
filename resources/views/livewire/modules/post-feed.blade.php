@@ -1,9 +1,10 @@
 <div class="mt-4">
-    <div class="mb-5 bg-white border">
+    @foreach($items as $item)
+        <div class="mb-5 bg-white border">
         <div class="flex px-3 py-2">
             <div class="flex flex-wrap items-center w-5/6">
                 <a href="#" class="inline-flex mr-4 font-semibold text-gray-700 hover:text-indigo-600">
-                    <img src="https://placehold.it/40" width="40" height="40" alt="Название #1" class="h-6 mr-2">
+                    <img src="https://placehold.it/40" width="40" height="40" alt="Название #1" class="h-6 w-6 mr-2">
                     Название #1
                 </a>
                 <a href="#" class="inline-flex text-sm text-gray-700 hover:text-indigo-600">
@@ -24,7 +25,7 @@
         <div class="px-3 py-2 pt-0">
             <h3 class="text-2xl font-semibold">
                 <a href="#">
-                    @{{ data.title }}
+                    {{ $item->title }}
                 </a>
             </h3>
         </div>
@@ -64,4 +65,16 @@
             </div>
         </div>
     </div>
+    @endforeach
+
+    @section('scripts-bottom')
+        <script type="text/javascript">
+            window.onscroll = function(ev) {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                    // window.livewire.emit('load-more');
+                    alert('you are here');
+                }
+            };
+        </script>
+    @endsection
 </div>

@@ -10,11 +10,12 @@ use App\Models\Post;
  */
 class PostService
 {
-    public function getAllPosts()
+    public function getAllPosts(int $count)
     {
         return Post::query()
             ->where('is_active', 1)
+            ->orderBy('id', 'desc')
+            ->take(10)
             ->get();
-//            ->paginate(10);
     }
 }
