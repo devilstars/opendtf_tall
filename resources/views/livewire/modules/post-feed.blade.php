@@ -25,7 +25,7 @@
         <div class="px-3 py-2 pt-0">
             <h3 class="text-2xl font-semibold">
                 <a href="#">
-                    {{ $item->title }}
+                    {{ $item->title }} ({{ $item->id }})
                 </a>
             </h3>
         </div>
