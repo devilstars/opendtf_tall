@@ -7,6 +7,11 @@ import Sidebar from "./modules/sidebar";
 import PostSort from "./modules/post-sort";
 
 
+/* turbolinks */
+const Turbolinks = require("turbolinks")
+Turbolinks.start()
+/* end of turbolinks */
+
 /* modals */
 new ModalAuth();
 /* end of modals */

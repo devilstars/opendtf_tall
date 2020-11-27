@@ -25,6 +25,7 @@
     "dependencies": {
         "@ryangjchandler/spruce": "^2.2.2",
         "autoprefixer": "^10.0.3",
-        "postcss": "^8.1.10"
+        "postcss": "^8.1.10",
+        "turbolinks": "^5.2.0"
     }
 }

@@ -24,6 +24,11 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         @yield('scripts-top')
+
+        <!-- Scripts -->
+        @livewireScripts
+        <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false"></script>
+        <script src="{{ url(mix('js/app.js')) }}" defer></script>
     </head>
 
     <body>
@@ -46,9 +51,7 @@
         </div>
     </div>
 
-        @livewireScripts
-        <!-- Scripts -->
-        <script src="{{ url(mix('js/app.js')) }}" defer></script>
-        @yield('scripts-bottom')
+    <!-- Scripts -->
+    @yield('scripts-bottom')
     </body>
 </html>

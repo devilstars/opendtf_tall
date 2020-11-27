@@ -7,6 +7,7 @@ OpenDTF is an open source website boilerplate based upon the popular Cmtt servic
 - Livewire
 - Alpine.JS
 - TailwindCSS
+- Turbolinks
 
 ## Build Setup
 
