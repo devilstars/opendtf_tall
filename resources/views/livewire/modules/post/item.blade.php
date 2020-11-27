@@ -11,8 +11,8 @@
             </a>
             <a href="#"
                class="inline-flex w-full mt-2 ml-0 text-sm text-gray-500 w-initial lg:mt-0 lg:ml-5 hover:text-indigo-600"
-               title="17 декабря 2019 15:25">
-                {{ $item->created_at->diffForHumans() }}
+               title="{{ $item->created_at->format('d.m.Y h:i') }}">
+                {{ $item->created_at->diffForHumans()  }}
             </a>
         </div>
         <div class="flex w-1/6">
@@ -35,7 +35,7 @@
     </div>
     <div class="px-3 py-2 mt-2">
         <p>
-            @{{ data.body }}
+            {{ $item->content }}
         </p>
     </div>
     <div class="flex px-3 py-2 mt-2">
