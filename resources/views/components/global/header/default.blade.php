@@ -2,7 +2,7 @@
     <div class="flex max-w-screen-xl py-3 px-1 md:px-6 w-full mx-auto">
         <div class="md:w-1/4 lg:w-1/5">
             <div class="pl-2 flex items-center flex-shrink-0 text-black mr-6 h-full">
-                <a href="#">
+                <a href="{{ route('front.home') }}">
                     <span class="font-bold text-xl tracking-tight">dev3l</span>
                 </a>
             </div>

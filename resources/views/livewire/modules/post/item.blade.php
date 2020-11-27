@@ -23,7 +23,7 @@
     </div>
     <div class="px-3 py-2 pt-0">
         <h3 class="text-2xl font-semibold">
-            <a href="#">
+            <a href="{{ route('front.post', ['id' => $item->id, 'slug' => $item->slug]) }}">
                 {{ $item->title }} ({{ $item->id }})
             </a>
         </h3>
@@ -42,14 +42,14 @@
         <a href="#" class="inline-flex mr-4 text-gray-500 align-middle hover:text-indigo-600">
             <x-icons.post-comments/>
             <span class="ml-1">
-                    111
-                </span>
+                111
+            </span>
         </a>
         <a href="#" class="inline-flex mr-4 text-gray-500 align-middle hover:text-indigo-600">
             <x-icons.post-favorites/>
             <span class="ml-1">
-                    33
-                </span>
+                33
+            </span>
         </a>
         <div class="inline-flex ml-auto align-middle">
             <a href="#" class="flex items-center text-gray-500 hover:text-red-600">
