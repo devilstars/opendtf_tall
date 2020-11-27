@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\PageController::class, 'home'])->name('front.home');
+Route::get('/post/{id}-{slug?}', [\App\Http\Controllers\PostController::class, 'singlePost'])->name('front.post');
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
