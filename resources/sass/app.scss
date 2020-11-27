@@ -1,7 +1,3 @@
-@import "global/global";
-@import "global/modules/scrollbar";
-@import "global/modules/sidebar";
-
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -57,3 +53,8 @@
 [x-cloak] {
     display: none;
 }
+
+/* custom styles for modules */
+@import "global/global";
+@import "global/modules/scrollbar";
+@import "global/modules/sidebar";

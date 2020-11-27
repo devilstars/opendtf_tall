@@ -23,8 +23,8 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "@ryangjchandler/spruce": "^2.2.1",
-        "autoprefixer": "^10.0.2",
+        "@ryangjchandler/spruce": "^2.2.2",
+        "autoprefixer": "^10.0.3",
         "postcss": "^8.1.10"
     }
 }
