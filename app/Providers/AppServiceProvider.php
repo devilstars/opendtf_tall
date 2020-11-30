@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Http\Services\CategoryService;
+use App\Http\Services\CommentService;
 use App\Http\Services\PostService;
 use Illuminate\Support\ServiceProvider;
 
@@ -17,6 +18,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind('PostService', PostService::class);
         $this->app->bind('CategoryService', CategoryService::class);
+        $this->app->bind('CommentService', CommentService::class);
     }
 
     /**

@@ -103,6 +103,6 @@
     </div>
 
     <div class="bg-white border mb-5 mt-5">
-        {{--        <post-comments/>--}}
+        <livewire:modules.comments.tree :item="$item" />
     </div>
 </div>
