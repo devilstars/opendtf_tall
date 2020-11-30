@@ -1,6 +1,6 @@
 <div class="mt-4">
     @foreach($items as $item)
-        <livewire:modules.post.item
+        <livewire:modules.post.teaser
             :item="$item"
             :key="'post-feed-'.$item->id">
     @endforeach
