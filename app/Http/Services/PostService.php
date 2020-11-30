@@ -24,4 +24,16 @@ class PostService
             ->skip($skip)
             ->get();
     }
+
+    /**
+     * @param int $id
+     * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Model
+     */
+    public function getSinglePost(int $id)
+    {
+        return Post::query()
+            ->where('is_active', 1)
+            ->where('id', $id)
+            ->firstOrFail();
+    }
 }
