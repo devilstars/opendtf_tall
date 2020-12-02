@@ -5,6 +5,7 @@ import ModalAuth from "./modules/modals/auth";
 import Search from "./modules/search";
 import Sidebar from "./modules/sidebar";
 import PostSort from "./modules/post-sort";
+import Toast from "./modules/toast";
 
 
 /* turbolinks */
@@ -21,6 +22,7 @@ new ModalAuth();
 new Search();
 new Sidebar();
 new PostSort();
+new Toast();
 /* end of modules */
 
 /**

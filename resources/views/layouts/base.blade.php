@@ -51,6 +51,8 @@
         </div>
     </div>
 
+    <x-global.toast />
+
     <!-- Scripts -->
     @yield('scripts-bottom')
     </body>
