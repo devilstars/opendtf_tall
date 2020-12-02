@@ -27,3 +27,7 @@
         width: initial;
     }
 }
+
+.max-h-screen {
+    max-height: calc(100vh - 100px)
+}

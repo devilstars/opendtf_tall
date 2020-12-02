@@ -9,6 +9,7 @@ class ModalAuth {
     init() {
         Spruce.store('modalAuth', {
             open: false,
+            mode: 1
         });
     }
 

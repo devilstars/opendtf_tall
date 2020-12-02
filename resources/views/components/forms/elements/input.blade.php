@@ -1,15 +1,15 @@
 <div>
-    <label class="block text-gray-700 text-sm font-bold mb-2" :for="id">
-        {{ label }}
+    <label class="block mb-2 text-sm font-bold text-gray-700" for="{{ $id }}">
+        {{ $label ?? '' }}
     </label>
     <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        :id="id"
-        :type="type"
-        :placeholder="placeholder"
-        v-model="data[id]"
-        :class="{'mb-3 border-red-500': checkValidationError(id)}">
-{{--    <template v-if="checkValidationError(id)" v-for="(item, index) in errors[id]">--}}
-{{--        <p class="text-red-500 text-xs italic" :key="id + '_' + index">{{ item }}</p>--}}
-{{--    </template>--}}
+        class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('email') mb-3 border-red-500 @enderror"
+        wire:model.lazy="{{ $model }}"
+        id="{{ $id }}"
+        type="{{ $type ?? 'text' }}"
+        placeholder="{{ $placeholder ?? '' }}"
+        {{ $required ?? '' }} {{ $autofocus ?? '' }}>
+        @error($model)
+            <p class="text-red-500 text-xs italic">{{ $message }}</p>
+        @enderror
 </div>
