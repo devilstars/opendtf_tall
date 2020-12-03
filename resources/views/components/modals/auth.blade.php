@@ -17,31 +17,42 @@
 
                 <div class="flex items-start px-5 py-3 bg-gray-200 border-b-2 rounded-t modal-header">
                     <h5 class="text-xl uppercase text-black-500">
-                        {{ __('front.login') }}
+                        <template x-if="$store.modalAuth.mode === 1">
+                            <span>
+                                {{ __('front.form.login') }}
+                            </span>
+                        </template>
+                        <template x-if="$store.modalAuth.mode === 2">
+                            <span>
+                                {{ __('front.form.create_account') }}
+                            </span>
+                        </template>
                     </h5>
                     <button class="mt-2 ml-auto text-gray-500 hover:text-indigo-500"
                             @click="closeModal">
                         <x-icons.close/>
                     </button>
                 </div>
-                <div class="flex w-full h-full modal-body">
+                <div class="flex w-full max-h-inherit">
                     <div class="hidden bg-center bg-no-repeat bg-cover border-r-2 sm:block sm:w-1/3"
                          style="background-image: url('/img/auth-bg.jpg')">
                     </div>
 
                     <!-- login -->
                     <div x-show="$store.modalAuth.mode === 1"
-                         class="w-full p-5 overflow-y-auto sm:w-2/3 max-h-screen scroll-thin">
+                         class="w-full p-5 overflow-y-auto sm:w-2/3 scroll-thin modal-body-height-fix">
                         <livewire:auth.modals.login/>
                     </div>
                     <!-- end of login -->
 
                     <!-- register -->
                     <div x-show="$store.modalAuth.mode === 2"
-                         class="w-full p-5 overflow-y-auto sm:w-2/3 max-h-screen scroll-thin">
+                         class="w-full p-5 overflow-y-auto sm:w-2/3 scroll-thin modal-body-height-fix">
                         <livewire:auth.modals.register/>
                     </div>
                     {{-- end of register --}}
+
+
                 {{--                            <div class="w-full p-5 overflow-y-auto sm:w-2/3 tm-max-h-screen scroll-thin">--}}
                 {{--                                <form class="w-full" @keyup.enter="doRegister(request)">--}}
                 {{--                                    <div class="mb-4">--}}
