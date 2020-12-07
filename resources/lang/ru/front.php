@@ -24,6 +24,9 @@ return [
         'password' => 'Пароль',
         'login' => 'Войти',
         'forgot_password' => 'Забыли пароль?',
-        'create_account' => 'Создать аккаунт'
+        'create_account' => 'Создать аккаунт',
+        'nick' => 'Ник',
+        'password_confirmation' => 'Подтверждение пароля',
+        'register' => 'Зарегистрироваться'
     ]
 ];
