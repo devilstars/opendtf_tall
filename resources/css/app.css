@@ -1,0 +1,17 @@
+@tailwind base;
+input:invalid, textarea:invalid, select:invalid {
+    box-shadow: none;
+}
+@tailwind components;
+
+/* custom styles for modules */
+@import "global/_global.css";
+@import "global/modules/_scrollbar.css";
+@import "global/modules/_sidebar.css";
+@import "global/modules/_modals.css";
+
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
