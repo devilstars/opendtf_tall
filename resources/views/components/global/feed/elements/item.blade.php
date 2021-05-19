@@ -1,6 +1,6 @@
 <div class="px-2 pt-3 pb-3">
     <a href="#" class="flex items-center text-xs font-semibold text-gray-700 hover:text-indigo-700">
-        <img src="https://placehold.it/40" class="h-6 mr-3" alt="">
+        <img src="http://placehold.it/40" class="h-6 mr-3" alt="">
         Имя Автора
     </a>
     <a href="#" class="block mt-2 text-sm leading-tight text-gray-600">

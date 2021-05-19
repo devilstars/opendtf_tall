@@ -2,7 +2,7 @@
     <div class="flex px-3 py-2">
         <div class="flex flex-wrap items-center w-5/6">
             <a href="#" class="inline-flex mr-4 font-semibold text-gray-700 hover:text-indigo-600">
-                <img src="https://placehold.it/40" width="40" height="40" alt="Название #1"
+                <img src="http://placehold.it/40" width="40" height="40" alt="Название #1"
                      class="w-6 h-6 mr-2">
                 Название #1
             </a>
@@ -10,7 +10,7 @@
                 Имя Автора
             </a>
             <a href="#"
-               class="inline-flex w-full mt-2 ml-0 text-sm text-gray-500 w-initial lg:mt-0 lg:ml-5 hover:text-indigo-600"
+               class="inline-flex w-full mt-2 ml-0 text-sm text-gray-500 lg:w-auto w-initial lg:mt-0 lg:ml-5 hover:text-indigo-600"
                title="{{ $item->created_at->format('d.m.Y h:i') }}">
                 {{ $item->created_at->diffForHumans()  }}
             </a>
@@ -30,7 +30,7 @@
     </div>
     <div class="mt-4">
         <a href="#">
-            <img src="https://placehold.it/700x400" width="700" height="400" alt="">
+            <img src="http://placehold.it/700x400" width="700" height="400" alt="">
         </a>
     </div>
     <div class="px-3 py-2 mt-2">
