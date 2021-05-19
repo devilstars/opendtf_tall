@@ -22,3 +22,12 @@
         </div>
     </div>
 </nav>
+
+{{-- it's here because Turbolinks caches modal windows after redirects --}}
+@if (session('closeAuthModal'))
+    <script>
+        setTimeout(() => {
+            Turbolinks.clearCache();
+        }, 1)
+    </script>
+@endif

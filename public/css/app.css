@@ -1304,6 +1304,10 @@ input:invalid, textarea:invalid, select:invalid {
 	border-radius: 0.375rem;
 }
 
+.rounded-none {
+	border-radius: 0px;
+}
+
 .rounded-t {
 	border-top-left-radius: 0.25rem;
 	border-top-right-radius: 0.25rem;
@@ -1357,6 +1361,10 @@ input:invalid, textarea:invalid, select:invalid {
 
 .border-r-4 {
 	border-right-width: 4px;
+}
+
+.border-r-0 {
+	border-right-width: 0px;
 }
 
 .border-dotted {
@@ -1575,6 +1583,10 @@ input:invalid, textarea:invalid, select:invalid {
 
 .text-center {
 	text-align: center;
+}
+
+.text-left {
+	text-align: left;
 }
 
 .align-baseline {

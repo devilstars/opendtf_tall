@@ -2723,6 +2723,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/sidebar */ "./resources/js/modules/sidebar.js");
 /* harmony import */ var _modules_post_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/post-sort */ "./resources/js/modules/post-sort.js");
 /* harmony import */ var _modules_toast__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/toast */ "./resources/js/modules/toast.js");
+/* harmony import */ var _modules_profile_profileMenu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/profile/profileMenu */ "./resources/js/modules/profile/profileMenu.js");
+
 
 
 
@@ -2748,6 +2750,7 @@ new _modules_search__WEBPACK_IMPORTED_MODULE_3__["default"]();
 new _modules_sidebar__WEBPACK_IMPORTED_MODULE_4__["default"]();
 new _modules_post_sort__WEBPACK_IMPORTED_MODULE_5__["default"]();
 new _modules_toast__WEBPACK_IMPORTED_MODULE_6__["default"]();
+new _modules_profile_profileMenu__WEBPACK_IMPORTED_MODULE_7__["default"]();
 /* end of modules */
 
 /**
@@ -2876,6 +2879,60 @@ var PostSort = /*#__PURE__*/function () {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (PostSort);
+
+/***/ }),
+
+/***/ "./resources/js/modules/profile/profileMenu.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/modules/profile/profileMenu.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var ProfileMenu = /*#__PURE__*/function () {
+  function ProfileMenu() {
+    _classCallCheck(this, ProfileMenu);
+
+    window.profileMenu = this.init;
+  }
+
+  _createClass(ProfileMenu, [{
+    key: "init",
+    value: function init() {
+      return {
+        open: function open() {
+          var _this = this;
+
+          setTimeout(function () {
+            _this.$store.profileMenu.open = true; // window.livewire.rescan()
+          }, 100);
+        },
+        close: function close() {
+          this.$store.profileMenu.open = false; // window.livewire.rescan()
+        },
+        closeAway: function closeAway() {
+          if (this.$store.profileMenu.open) {
+            this.$store.profileMenu.open = false; // window.livewire.rescan()
+          } else {
+            return false;
+          }
+        }
+      };
+    }
+  }]);
+
+  return ProfileMenu;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ProfileMenu);
 
 /***/ }),
 
@@ -3083,6 +3140,48 @@ var ModalAuth = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./resources/js/state/modules/profile/profileMenu.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/state/modules/profile/profileMenu.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ryangjchandler_spruce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ryangjchandler/spruce */ "./node_modules/@ryangjchandler/spruce/dist/spruce.umd.js");
+/* harmony import */ var _ryangjchandler_spruce__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ryangjchandler_spruce__WEBPACK_IMPORTED_MODULE_0__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+var ProfileMenu = /*#__PURE__*/function () {
+  function ProfileMenu() {
+    _classCallCheck(this, ProfileMenu);
+
+    this.init();
+  }
+
+  _createClass(ProfileMenu, [{
+    key: "init",
+    value: function init() {
+      _ryangjchandler_spruce__WEBPACK_IMPORTED_MODULE_0___default.a.store('profileMenu', {
+        open: false
+      });
+    }
+  }]);
+
+  return ProfileMenu;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ProfileMenu);
+
+/***/ }),
+
 /***/ "./resources/js/state/modules/search.js":
 /*!**********************************************!*\
   !*** ./resources/js/state/modules/search.js ***!
@@ -3217,6 +3316,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modals_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modals/auth */ "./resources/js/state/modals/auth.js");
 /* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/search */ "./resources/js/state/modules/search.js");
 /* harmony import */ var _modules_sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/sidebar */ "./resources/js/state/modules/sidebar.js");
+/* harmony import */ var _modules_profile_profileMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/profile/profileMenu */ "./resources/js/state/modules/profile/profileMenu.js");
+
 
 
 
@@ -3230,6 +3331,7 @@ new _modals_auth__WEBPACK_IMPORTED_MODULE_1__["default"]();
 
 new _modules_search__WEBPACK_IMPORTED_MODULE_2__["default"]();
 new _modules_sidebar__WEBPACK_IMPORTED_MODULE_3__["default"]();
+new _modules_profile_profileMenu__WEBPACK_IMPORTED_MODULE_4__["default"]();
 /* end of modules */
 
 /* harmony default export */ __webpack_exports__["default"] = (_ryangjchandler_spruce__WEBPACK_IMPORTED_MODULE_0___default.a);

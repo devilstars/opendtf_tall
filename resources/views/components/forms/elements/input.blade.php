@@ -3,7 +3,7 @@
         {{ $label ?? '' }}
     </label>
     <input
-        class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('email') mb-3 border-red-500 @enderror"
+        class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error($model) mb-3 border-red-500 @enderror"
         wire:model.lazy="{{ $model }}"
         id="{{ $id }}"
         type="{{ $type ?? 'text' }}"

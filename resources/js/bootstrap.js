@@ -6,6 +6,7 @@ import Search from "./modules/search";
 import Sidebar from "./modules/sidebar";
 import PostSort from "./modules/post-sort";
 import Toast from "./modules/toast";
+import ProfileMenu from "./modules/profile/profileMenu";
 
 
 /* turbolinks */
@@ -23,6 +24,7 @@ new Search();
 new Sidebar();
 new PostSort();
 new Toast();
+new ProfileMenu();
 /* end of modules */
 
 /**
@@ -41,3 +43,4 @@ new Toast();
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+

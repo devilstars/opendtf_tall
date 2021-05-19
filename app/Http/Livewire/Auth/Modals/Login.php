@@ -31,6 +31,8 @@ class Login extends Component
             return;
         }
 
+        session()->flash('closeAuthModal', true);
+
         return redirect()->intended(route('front.home'));
     }
 

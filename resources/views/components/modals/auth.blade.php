@@ -50,7 +50,7 @@
                          class="w-full p-5 overflow-y-auto sm:w-2/3 scroll-thin modal-body-height-fix">
                         <livewire:auth.modals.register/>
                     </div>
-                    {{-- end of register --}}
+                {{-- end of register --}}
 
 
                 {{--                            <div class="w-full p-5 overflow-y-auto sm:w-2/3 tm-max-h-screen scroll-thin">--}}

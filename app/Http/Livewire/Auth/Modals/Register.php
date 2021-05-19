@@ -43,6 +43,8 @@ class Register extends Component
 
         Auth::login($user, true);
 
+        session()->flash('closeAuthModal', true);
+
         return redirect()->intended(route('front.home'));
     }
 
