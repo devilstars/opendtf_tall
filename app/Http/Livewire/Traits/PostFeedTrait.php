@@ -11,14 +11,12 @@ use Illuminate\Contracts\Container\BindingResolutionException;
 trait PostFeedTrait
 {
     /**
-     * @param null $items
+     * check if it's an end of feed
      * @param bool $value
      */
-    public function setEnd($items = null, bool $value = false)
+    public function setEnd(bool $value = false)
     {
-        if (count($items) < $this->perPage) {
-            $this->end = $value;
-        }
+        $this->end = $value;
     }
 
     /**
@@ -26,28 +24,27 @@ trait PostFeedTrait
      */
     public function initialLoad()
     {
-        if (!$this->skip) {
-            try {
-                $this->items = app()->make('PostService')->getAllPosts(0, 10);
-            } catch (BindingResolutionException $e) {
-            }
+        $this->items = app('PostService')->getInitialPosts();
 
-            $this->setEnd($this->items, true);
+        try {
+            $this->lastId = $this->items->last()->id;
+        } catch (\ErrorException $e) {
+            $this->setEnd(true);
         }
     }
 
     /**
      * load more posts
-     * @param $loadMore
      */
-    public function loadMore($loadMore)
+    public function loadMore()
     {
-        if ($this->skip && !$this->end) {
-            try {
-                $loadMore = app()->make('PostService')->getAllPosts($this->skip, $this->perPage);
+        if (!$this->end) {
+            $loadMore = app('PostService')->getInitialPosts($this->lastId);
 
-                $this->setEnd($loadMore, true);
-            } catch (BindingResolutionException $e) {
+            try {
+                $this->lastId = $loadMore->last()->id;
+            } catch (\ErrorException $e) {
+                $this->setEnd(true);
             }
 
             $this->items = $this->items->concat($loadMore);
