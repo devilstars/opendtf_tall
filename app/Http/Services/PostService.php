@@ -11,17 +11,19 @@ use App\Models\Post;
 class PostService
 {
     /**
-     * @param int $skip
-     * @param int $perPage
-     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
+     * imitation of cursor pagination
+     * @param int|null $lastId
+     * @return array|\Illuminate\Database\Concerns\BuildsQueries[]|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
      */
-    public function getAllPosts(int $skip = 0, int $perPage = 10)
+    public function getInitialPosts(int $lastId = null)
     {
         return Post::query()
             ->where('is_active', 1)
             ->orderBy('id', 'desc')
-            ->take(10)
-            ->skip($skip)
+            ->when($lastId, function ($query, $lastId) {
+                return $query->where('id', '<', $lastId);
+            })
+            ->limit(10)
             ->get();
     }
 
