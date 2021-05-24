@@ -42,6 +42,8 @@ class FillACL extends Command
         $this->roles();
         $this->permissions();
 
+        $this->superUserPermission();
+
         return true;
     }
 
@@ -104,6 +106,23 @@ class FillACL extends Command
             } catch (\Exception $e) {
                 continue;
             }
+        }
+    }
+
+    private function superUserPermission()
+    {
+        $role = Role::query()
+            ->where('name', 'Super User')
+            ->firstOrFail();
+
+        $permission = Permission::query()
+            ->where('name', 'super_user')
+            ->firstOrFail();
+
+        try {
+            $role->givePermissionTo($permission);
+        } catch (\Exception $e) {
+            return;
         }
     }
 }
