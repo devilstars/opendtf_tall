@@ -50,56 +50,7 @@
                          class="w-full p-5 overflow-y-auto sm:w-2/3 scroll-thin modal-body-height-fix">
                         <livewire:auth.modals.register/>
                     </div>
-                {{-- end of register --}}
-
-
-                {{--                            <div class="w-full p-5 overflow-y-auto sm:w-2/3 tm-max-h-screen scroll-thin">--}}
-                {{--                                <form class="w-full" @keyup.enter="doRegister(request)">--}}
-                {{--                                    <div class="mb-4">--}}
-                {{--                                        <app-form-input type="email"--}}
-                {{--                                                        :data="request"--}}
-                {{--                                                        :errors="errors"--}}
-                {{--                                                        id="email"--}}
-                {{--                                                        label="E-mail" placeholder="E-mail"/>--}}
-                {{--                                    </div>--}}
-                {{--                                    <div class="mb-6">--}}
-                {{--                                        <div class="mb-4">--}}
-                {{--                                            <app-form-input type="text"--}}
-                {{--                                                            :data="request"--}}
-                {{--                                                            :errors="errors"--}}
-                {{--                                                            id="name"--}}
-                {{--                                                            label="Ник" placeholder="Ник"/>--}}
-                {{--                                        </div>--}}
-                {{--                                        <app-form-input type="password"--}}
-                {{--                                                        :data="request"--}}
-                {{--                                                        :errors="errors"--}}
-                {{--                                                        id="password"--}}
-                {{--                                                        label="Пароль" placeholder="******************"/>--}}
-                {{--                                    </div>--}}
-                {{--                                    <div class="mb-6">--}}
-                {{--                                        <app-form-input type="password"--}}
-                {{--                                                        :data="request"--}}
-                {{--                                                        :errors="errors"--}}
-                {{--                                                        id="password_confirmation"--}}
-                {{--                                                        label="Пароль ещё раз" placeholder="******************"/>--}}
-                {{--                                    </div>--}}
-                {{--                                    <div class="flex items-center justify-between">--}}
-                {{--                                        <button--}}
-                {{--                                            class="h-10 px-4 font-semibold text-gray-800 whitespace-no-wrap bg-white border-2 border-gray-300 rounded-lg hover:border-indigo-300 focus:border-indigo-500 focus:outline-none hover:text-indigo-500 focus:shadow-outline"--}}
-                {{--                                            type="button"--}}
-                {{--                                            @click="doRegister(request)">--}}
-                {{--                                            Зарегистрироваться--}}
-                {{--                                        </button>--}}
-                {{--                                    </div>--}}
-                {{--                                    <div class="flex items-center justify-center pt-3 mt-3 border-t">--}}
-                {{--                                        <a class="inline-block text-sm font-bold text-gray-500 align-baseline hover:text-indigo-800"--}}
-                {{--                                           href="#" @click.prevent="mode = 0">--}}
-                {{--                                            Войти--}}
-                {{--                                        </a>--}}
-                {{--                                    </div>--}}
-                {{--                                </form>--}}
-                {{--                            </div>--}}
-                <!-- end of register -->
+                    <!-- end of register -->
 
                 </div>
             </div>

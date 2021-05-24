@@ -41,6 +41,9 @@ class Register extends Component
 
         event(new Registered($user));
 
+        /* Assign default roles */
+        app('ACL')->syncRoles($user, ['User']);
+
         Auth::login($user, true);
 
         session()->flash('closeAuthModal', true);
