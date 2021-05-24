@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Services\ACLService;
 use App\Http\Services\CategoryService;
 use App\Http\Services\CommentService;
 use App\Http\Services\PostService;
@@ -19,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('PostService', PostService::class);
         $this->app->bind('CategoryService', CategoryService::class);
         $this->app->bind('CommentService', CommentService::class);
+        $this->app->bind('ACL', ACLService::class);
     }
 
     /**

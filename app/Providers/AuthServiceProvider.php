@@ -25,6 +25,13 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        /* super users can do anything */
+        Gate::before(function ($user, $ability) {
+            if ($user->hasRole('Super User') || $user->hasPermission('super_user')) {
+                return true;
+            } else {
+                return null;
+            }
+        });
     }
 }
