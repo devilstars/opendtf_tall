@@ -125,4 +125,14 @@ class FillACL extends Command
             return;
         }
     }
+
+    /**
+     * TODO set default user direct permissions here if needed
+     */
+    private function userPermissions()
+    {
+        $role = Role::query()
+            ->where('name', 'User')
+            ->firstOrFail();
+    }
 }
