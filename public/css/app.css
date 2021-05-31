@@ -1038,6 +1038,10 @@ input:invalid, textarea:invalid, select:invalid {
 	display: inline-flex;
 }
 
+.grid {
+	display: grid;
+}
+
 .hidden {
 	display: none;
 }
@@ -1084,6 +1088,10 @@ input:invalid, textarea:invalid, select:invalid {
 
 .h-10 {
 	height: 2.5rem;
+}
+
+.h-20 {
+	height: 5rem;
 }
 
 .max-h-screen {
@@ -1158,6 +1166,10 @@ input:invalid, textarea:invalid, select:invalid {
 	width: 2.5rem;
 }
 
+.w-1\/2 {
+	width: 50%;
+}
+
 .min-w-full {
 	min-width: 100%;
 }
@@ -1223,6 +1235,14 @@ input:invalid, textarea:invalid, select:invalid {
 	        appearance: none;
 }
 
+.grid-cols-2 {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col {
 	flex-direction: column;
 }
@@ -1269,6 +1289,10 @@ input:invalid, textarea:invalid, select:invalid {
 
 .justify-end {
 	justify-content: flex-end;
+}
+
+.gap-4 {
+	gap: 1rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1417,6 +1441,11 @@ input:invalid, textarea:invalid, select:invalid {
 .border-purple-200 {
 	--tw-border-opacity: 1;
 	border-color: rgba(221, 214, 254, var(--tw-border-opacity));
+}
+
+.border-indigo-900 {
+	--tw-border-opacity: 1;
+	border-color: rgba(49, 46, 129, var(--tw-border-opacity));
 }
 
 .bg-gray-50 {
@@ -1931,6 +1960,11 @@ input:invalid, textarea:invalid, select:invalid {
 .hover\:border-indigo-200:hover {
 	--tw-border-opacity: 1;
 	border-color: rgba(199, 210, 254, var(--tw-border-opacity));
+}
+
+.hover\:border-indigo-400:hover {
+	--tw-border-opacity: 1;
+	border-color: rgba(129, 140, 248, var(--tw-border-opacity));
 }
 
 .hover\:bg-indigo-500:hover {
