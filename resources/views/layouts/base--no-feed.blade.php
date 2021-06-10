@@ -42,11 +42,8 @@
                  @click.away="hideAway"> <!-- .tm-active to toggle -->
                 <x-global.sidebar.default />
             </div>
-            <div class="w-full px-2 md:w-3/4 lg:w-3/5 md:px-6">
+            <div class="w-full px-2 md:w-3/4 lg:w-4/5 md:px-6">
                 @yield('body')
-            </div>
-            <div class="hidden w-1/5 border-l-2 lg:block">
-                <x-global.feed.default />
             </div>
         </div>
     </div>

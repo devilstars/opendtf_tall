@@ -25,8 +25,10 @@ Route::get('/', [\App\Http\Controllers\PageController::class, 'home'])->name('fr
 Route::get('/post/{id}-{slug?}', [\App\Http\Controllers\PostController::class, 'singlePost'])->name('front.post');
 
 Route::middleware('auth:web')->group(function () {
-    Route::get('dashboard', [\App\Http\Controllers\PageController::class, 'dashboard'])
+    Route::get('dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])
         ->name('front.dashboard');
+    Route::get('dashboard/roles', [\App\Http\Controllers\DashboardController::class, 'roles'])
+        ->name('front.dashboard.roles');
 });
 
 Route::middleware('guest')->group(function () {

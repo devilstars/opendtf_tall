@@ -11,3 +11,8 @@ Breadcrumbs::for('dashboard', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
     $trail->push(__('front.nav.dashboard'), route('front.dashboard'));
 });
+
+Breadcrumbs::for('dasboard.roles', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push(__('front.nav.roles'), route('front.dashboard.roles'));
+});

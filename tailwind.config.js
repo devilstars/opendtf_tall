@@ -21,11 +21,7 @@ module.exports = {
             './resources/**/*.php',
             './resources/**/*.vue',
             './resources/**/*.twig',
-        ],
-        options: {
-            defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
-            whitelistPatterns: [/-active$/, /-enter$/, /-leave-to$/, /show$/],
-        },
+        ]
     },
     plugins: [
         require('@tailwindcss/forms'),
