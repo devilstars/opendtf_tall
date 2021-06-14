@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use App\Models\User;
+use Spatie\Permission\Models\Role;
 
 class ACLService
 {
@@ -31,5 +32,16 @@ class ACLService
     public function removeRole(User $user, string $role)
     {
         $user->removeRole($role);
+    }
+
+    /**
+     * @param int $perPage
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function getRoles(int $perPage = 15): \Illuminate\Contracts\Pagination\LengthAwarePaginator
+    {
+        return Role::query()
+            ->orderBy('id')
+            ->paginate($perPage);
     }
 }

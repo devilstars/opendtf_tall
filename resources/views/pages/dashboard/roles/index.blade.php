@@ -13,6 +13,6 @@
             </a>
         </div>
 
-        <x-modules.dashboard.datatables.roles-datatable />
+        <x-modules.dashboard.datatables.roles-datatable :items="$items" />
     </div>
 @endsection

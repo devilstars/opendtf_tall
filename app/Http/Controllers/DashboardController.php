@@ -21,6 +21,10 @@ class DashboardController extends Controller
      */
     public function roles(Request $request)
     {
-        return view('pages.dashboard.roles.index');
+        $items = app('ACL')->getRoles(1);
+
+        return view('pages.dashboard.roles.index', compact([
+            'items',
+        ]));
     }
 }
