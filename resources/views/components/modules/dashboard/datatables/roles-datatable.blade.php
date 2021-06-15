@@ -23,7 +23,7 @@
 {{--                               title="{{ __('front.table.view') }}">--}}
 {{--                                <x-icons.table-view/>--}}
 {{--                            </a>--}}
-                            <a href="#" class="w-4 mr-2 transform hover:text-indigo-500 hover:scale-110"
+                            <a href="{{ route('front.dashboard.roles.edit', $item->id) }}" class="w-4 mr-2 transform hover:text-indigo-500 hover:scale-110"
                                title="{{ __('front.table.edit') }}">
                                 <x-icons.table-edit/>
                             </a>

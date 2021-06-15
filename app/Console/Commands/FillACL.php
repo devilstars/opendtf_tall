@@ -79,11 +79,17 @@ class FillACL extends Command
             // super user
             ['name' => 'super_user'],
 
-            // admin
+            // dashboard
             ['name' => 'dashboard_view'],
+
+            // dashbard users
             ['name' => 'dashboard_users_view'],
             ['name' => 'dashboard_users_edit'],
             ['name' => 'dashboard_users_block'],
+
+            //dashboard roles
+            ['name' => 'dashboard_roles_view'],
+            ['name' => 'dashboard_roles_edit'],
 
             // basic user
             ['name' => 'post_create'],

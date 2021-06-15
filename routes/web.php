@@ -27,8 +27,10 @@ Route::get('/post/{id}-{slug?}', [\App\Http\Controllers\PostController::class, '
 Route::middleware('auth:web')->group(function () {
     Route::get('dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])
         ->name('front.dashboard');
-    Route::get('dashboard/roles', [\App\Http\Controllers\DashboardController::class, 'roles'])
+    Route::get('dashboard/roles', [\App\Http\Controllers\RoleController::class, 'index'])
         ->name('front.dashboard.roles');
+    Route::get('dashboard/roles/{id}/edit', [\App\Http\Controllers\RoleController::class, 'edit'])
+        ->name('front.dashboard.roles.edit');
 });
 
 Route::middleware('guest')->group(function () {
