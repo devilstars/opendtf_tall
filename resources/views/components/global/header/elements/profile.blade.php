@@ -22,17 +22,17 @@
                 <li>
                     <a href="#" class="block px-2 py-1 text-sm hover:bg-gray-100">Элемент #04</a>
                 </li>
-                <li v-if="checkAbilities(['user:list'])">
-                    <nuxt-link :to="{ name: 'admin-users' }" class="block px-2 py-1 text-sm hover:bg-gray-100">
-                        Пользователи
-                    </nuxt-link>
-                </li>
+                @can('dashboard_view')
+                    <li>
+                        <a href="{{ route('front.dashboard') }}" class="block px-2 py-1 text-sm hover:bg-gray-100">{{ __('front.nav.dashboard') }}</a>
+                    </li>
+                @endcan
                 <li>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <button type="submit"
                                 class="block w-full px-2 py-1 text-sm text-left bg-red-100 rounded-none hover:bg-gray-100">
-                            Выход
+                            {{ __('front.nav.logout') }}
                         </button>
                     </form>
                 </li>
