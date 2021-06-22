@@ -23,14 +23,21 @@ class RoleController extends Controller
     }
 
     /**
+     * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function edit()
+    public function edit(int $id)
     {
         if (!auth()->user()->canAny(['dashboard_roles_view', 'dashboard_roles_edit'])) {
             return redirect(route('front.home'));
         }
 
-        return view('pages.dashboard.roles.edit');
+        $page = app('ACL')->getRoleById($id);
+        $permissions = app('ACL')->getPermissions();
+
+        return view('pages.dashboard.roles.edit', compact(
+            'page',
+            'permissions'
+        ));
     }
 }

@@ -28,17 +28,24 @@ return [
         'nick' => 'Ник',
         'password_confirmation' => 'Подтверждение пароля',
         'register' => 'Зарегистрироваться',
-        'add' => 'Добавить'
+        'add' => 'Добавить',
+        'save' => 'Сохранить'
     ],
     'nav' => [
         'home' => 'Главная',
         'dashboard' => 'Панель управления',
         'roles' => 'Роли',
-        'logout' => 'Выход'
+        'logout' => 'Выход',
+        'role' => 'Роль'
     ],
     'users' => 'Пользователи',
     'roles' => [
-        'roles' => 'Роли'
+        'roles' => 'Роли',
+        'super_user' => 'Супер пользователь'
+    ],
+    // TODO fill permissions
+    'permissions' => [
+        'super_user' => 'Режим бога'
     ],
     'table' => [
         'actions' => 'Действия',

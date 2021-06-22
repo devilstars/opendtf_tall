@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use App\Models\User;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class ACLService
@@ -43,5 +44,23 @@ class ACLService
         return Role::query()
             ->orderBy('id')
             ->paginate($perPage);
+    }
+
+    /**
+     * @param int $id
+     * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Model
+     */
+    public function getRoleById(int $id)
+    {
+        return Role::query()
+            ->with('permissions')
+            ->where('id', $id)
+            ->firstOrFail();
+    }
+
+    public function getPermissions()
+    {
+        return Permission::query()
+            ->get();
     }
 }

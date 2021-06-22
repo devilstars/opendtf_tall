@@ -12,7 +12,12 @@ Breadcrumbs::for('dashboard', function (BreadcrumbTrail $trail) {
     $trail->push(__('front.nav.dashboard'), route('front.dashboard'));
 });
 
-Breadcrumbs::for('dasboard.roles', function (BreadcrumbTrail $trail) {
+Breadcrumbs::for('dashboard.roles', function (BreadcrumbTrail $trail) {
     $trail->parent('dashboard');
     $trail->push(__('front.nav.roles'), route('front.dashboard.roles'));
+});
+
+Breadcrumbs::for('dashboard.role', function (BreadcrumbTrail $trail, $item) {
+    $trail->parent('dashboard.roles');
+    $trail->push($item->name, route('front.dashboard.roles.edit', $item->id));
 });

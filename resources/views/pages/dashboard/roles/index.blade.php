@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="mt-5">
-        {{ Breadcrumbs::render('dasboard.roles') }}
+        {{ Breadcrumbs::render('dashboard.roles') }}
 
         <div class="flex items-center justify-between mt-6">
             <h1 class="text-2xl font-semibold text-gray-900">

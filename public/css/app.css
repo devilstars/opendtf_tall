@@ -1904,6 +1904,11 @@ input:invalid, textarea:invalid, select:invalid {
 	color: rgba(6, 95, 70, var(--tw-text-opacity));
 }
 
+.text-yellow-700 {
+	--tw-text-opacity: 1;
+	color: rgba(180, 83, 9, var(--tw-text-opacity));
+}
+
 .underline {
 	text-decoration: underline;
 }
