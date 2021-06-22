@@ -1,7 +1,4 @@
 const mix = require("laravel-mix");
-
-require("laravel-mix-tailwind");
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
