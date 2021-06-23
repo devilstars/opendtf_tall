@@ -2,9 +2,6 @@
 
 @section('content')
     <form class="my-5">
-        <div class="text-red-700">
-            text
-        </div>
         @csrf
         {{ Breadcrumbs::render('dashboard.role', $page) }}
 

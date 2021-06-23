@@ -35,6 +35,7 @@
 .max-h-inherit {
     max-height: inherit;
 }
+
 html {
     scrollbar-color: #4f46e5 #F5F5F5;
     scrollbar-width: thin;
@@ -88,6 +89,7 @@ html::-webkit-scrollbar-thumb {
     transparent 75%,
     transparent)
 }
+
 @media all and (max-width: 767px) {
     .tm-sidebar {
         position: fixed;
@@ -102,9 +104,11 @@ html::-webkit-scrollbar-thumb {
         left: 0;
     }
 }
+
 .modal-body-height-fix {
     max-height: calc(100vh - 154px);
 }
+
 /*! tailwindcss v2.2.2 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
@@ -869,6 +873,39 @@ select {
 }
 input:invalid, textarea:invalid, select:invalid {
     box-shadow: none;
+}
+.container {
+	width: 100%;
+}
+@media (min-width: 640px) {
+
+	.container {
+		max-width: 640px;
+	}
+}
+@media (min-width: 768px) {
+
+	.container {
+		max-width: 768px;
+	}
+}
+@media (min-width: 1024px) {
+
+	.container {
+		max-width: 1024px;
+	}
+}
+@media (min-width: 1280px) {
+
+	.container {
+		max-width: 1280px;
+	}
+}
+@media (min-width: 1536px) {
+
+	.container {
+		max-width: 1536px;
+	}
 }
 
 /* custom styles for modules */
@@ -1904,9 +1941,14 @@ input:invalid, textarea:invalid, select:invalid {
 	color: rgba(6, 95, 70, var(--tw-text-opacity));
 }
 
-.text-yellow-700 {
+.text-green-500 {
 	--tw-text-opacity: 1;
-	color: rgba(180, 83, 9, var(--tw-text-opacity));
+	color: rgba(16, 185, 129, var(--tw-text-opacity));
+}
+
+.text-blue-500 {
+	--tw-text-opacity: 1;
+	color: rgba(59, 130, 246, var(--tw-text-opacity));
 }
 
 .underline {
@@ -2376,3 +2418,4 @@ input:invalid, textarea:invalid, select:invalid {
 		padding-right: 2rem;
 	}
 }
+

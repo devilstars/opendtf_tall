@@ -12,15 +12,9 @@ module.exports = {
     variants: {},
     purge: {
         content: [
-            './app/**/*.php',
-            './resources/**/*.html',
+            './resources/**/*.blade.php',
             './resources/**/*.js',
-            './resources/**/*.jsx',
-            './resources/**/*.ts',
-            './resources/**/*.tsx',
-            './resources/**/*.php',
-            './resources/**/*.vue',
-            './resources/**/*.twig',
+            './config/*.php',
         ]
     },
     plugins: [
